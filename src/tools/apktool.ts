@@ -20,6 +20,7 @@ export default class Apktool extends Tool {
       [
         'decode',
         inputPath,
+        '--no-src',
         '--output',
         outputPath,
         '--frame-path',
@@ -58,7 +59,7 @@ export default class Apktool extends Tool {
   get version() {
     if (this.options.customPath) return { name: chalk.italic('custom version') }
 
-    const versionNumber = '2.6.1'
+    const versionNumber = '2.7.0'
 
     return {
       name: `v${versionNumber}`,
